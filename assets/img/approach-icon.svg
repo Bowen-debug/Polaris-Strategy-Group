@@ -1,0 +1,36 @@
+<svg width="140" height="60" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="approachGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="approachGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Process circles -->
+  <circle cx="20" cy="30" r="15" fill="url(#approachGrad)" filter="url(#approachGlow)"/>
+  <text x="20" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">1</text>
+  
+  <circle cx="70" cy="30" r="15" fill="url(#approachGrad)" filter="url(#approachGlow)"/>
+  <text x="70" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">2</text>
+  
+  <circle cx="120" cy="30" r="15" fill="url(#approachGrad)" filter="url(#approachGlow)"/>
+  <text x="120" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">3</text>
+  
+  <!-- Connecting arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="url(#approachGrad)" />
+    </marker>
+  </defs>
+  
+  <line x1="35" y1="30" x2="55" y2="30" stroke="url(#approachGrad)" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="85" y1="30" x2="105" y2="30" stroke="url(#approachGrad)" stroke-width="2" marker-end="url(#arrowhead)"/>
+</svg>
